@@ -7,7 +7,7 @@ import subtitle from "../../assets/images/subtitle.svg";
 export const Header = () => {
   const { width } = useScreenWidth();
 
-  const Clip = (url: string) => {
+  const videoRender = (url: string) => {
     return (
       <video
         key={url}
@@ -23,7 +23,7 @@ export const Header = () => {
 
   return (
     <header className="h-screen">
-      {width <= 1000 ? Clip(videoSm) : Clip(videoLg)}
+      {width <= 1000 ? videoRender(videoSm) : videoRender(videoLg)}
       <div className="h-screen w-full flex justify-center items-center lg:justify-start lg:w-4/5 lg:mx-auto">
         <div className="flex flex-col">
           <img
