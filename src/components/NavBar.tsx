@@ -10,16 +10,18 @@ export const NavBar = () => {
   const scrollPosition = useScrollPosition();
 
   const defaultStyle =
-    " fixed w-full flex justify-between transition-all items-center px-4 py-4";
+    " fixed w-full flex justify-between transition-all items-center px-4 py-4 ";
 
   const isActiveLink = ({ isActive }: IsActiveLinkProps): string => {
-    const defaultNavStyle = `uppercase font-bold tracking-[0.2em] text-xl lg:text-base ${
-      scrollPosition < 90 ? "text-gray-50" : "text-gray-800"
-    }`;
+    const defaultNavStyle =
+      "uppercase font-bold tracking-[0.2em] text-xl lg:text-base hover:text-[#fd9b49] ";
 
     return isActive
-      ? "text-[#fd9b49] " + defaultNavStyle
-      : "hover:text-[#fd9b49] " + defaultNavStyle;
+      ? defaultNavStyle + " text-[#fd9b49] "
+      : defaultNavStyle +
+          (!isActive && scrollPosition < 90
+            ? " text-gray-50"
+            : " text-[#474747]");
   };
 
   return (
