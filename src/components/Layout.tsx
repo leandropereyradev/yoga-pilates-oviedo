@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet";
+import logo from "../assets/images/logo.svg";
 
 interface LayoutProps {
   title: string;
@@ -14,7 +15,7 @@ export const Layout = ({ title, children }: LayoutProps) => {
           name="description"
           content="Yoga y Pilates en Oviedo - Asturias"
         />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href={logo} />
       </Helmet>
 
       {children}
