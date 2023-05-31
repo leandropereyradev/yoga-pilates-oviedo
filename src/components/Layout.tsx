@@ -2,7 +2,7 @@ import { Helmet } from "react-helmet";
 import logo from "../assets/images/logo.svg";
 
 interface LayoutProps {
-  title: string;
+  title?: string;
   children: JSX.Element;
 }
 
