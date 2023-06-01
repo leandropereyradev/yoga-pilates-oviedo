@@ -1,6 +1,6 @@
 import useScreenWidth from "../../hook/useScreenWidth";
-import videoSm from "../../assets/video/lotus_sm.webm";
-import videoLg from "../../assets/video/lotus_lg.webm";
+import videoSm from "../../assets/video/lotus_sm.mp4";
+import videoLg from "../../assets/video/lotus_lg.mp4";
 import logoText from "../../assets/images/logo-texto.svg";
 import subtitle from "../../assets/images/subtitle.svg";
 
@@ -23,7 +23,7 @@ export const Header = () => {
 
   return (
     <header className="h-screen">
-      {width <= 1000 ? videoRender(videoSm) : videoRender(videoLg)}
+      {width <= 720 ? videoRender(videoSm) : videoRender(videoLg)}
       <div className="h-screen w-full flex justify-center items-center lg:justify-start lg:w-4/5 lg:mx-auto">
         <div className="flex flex-col">
           <img
